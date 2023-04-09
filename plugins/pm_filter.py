@@ -781,7 +781,7 @@ async def advantage_spell_chok(msg):
 
 
 async def manual_filters(client, message, text=False):
-    group_id = message.chat.id
+    group_id = message.from_user.id
     name = text or message.text
     reply_id = message.reply_to_message.id if message.reply_to_message else message.id
     keywords = await get_filters(group_id)
